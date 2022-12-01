@@ -16,6 +16,36 @@
     >
       <div>
         <h1>Library Project</h1>
+        <form action="" id="form">
+          <div class="form-group">
+            <label for="title">Input title of book here:</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              required="true"
+              placeholder="Book title"
+            />
+          </div>
+          <div class="form-group">
+            <label for="author">Input author of book here:</label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              required="true"
+              placeholder="Book author"
+            />
+          </div>
+          <div class="form-group">
+            <label for="read">Check if book has been read</label>
+            <input type="checkbox" name="read" id="read" />
+          </div>
+          <div class="form-group">
+            <button type="submit" id="addBookBtn">Add book</button>
+          </div>
+        </form>
+        <hr />
         <div id="library">
           <!-- Add table here -->
           <table id="table" style="min-width: 680px; margin: 2rem">
@@ -26,23 +56,28 @@
                 <th>Read</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="tBody">
+              <!-- <tr id="0">
                 <td>Name of the Wind</td>
                 <td>Patrick Rothfuss</td>
                 <td>
                   <input
                     type="checkbox"
-                    name="read"
+                    name="readBox"
                     id="readLibraryCheckbox"
                     checked
                     disabled
                   />
                 </td>
-              </tr>
+                <td>
+                  <input type="button" value="Remove" id="0" />
+                </td> -->
+              <!-- </tr> -->
             </tbody>
           </table>
+          <p id="numBooks"></p>
         </div>
+      </div>
     </main>
 
     <script src="app.js"></script>
